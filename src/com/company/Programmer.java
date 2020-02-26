@@ -8,11 +8,11 @@ public final class Programmer extends Backend {
 
     @Override
     public String getInfo() {
-        return super.getInfo() + " Age: " + age + " Level: " + level ;
+        return super.getInfo() + " || Age: " + age + " || Level: " + level ;
     }
 
-    public Programmer(String framework, String ide, String developType, int age, Level level) {
-        super(framework, ide, developType);
+    public Programmer(String framework, String ide, String developType, Language language, int age, Level level) {
+        super(framework, ide, developType, language);
         this.age = age;
         this.level = level;
     }

@@ -4,6 +4,8 @@ public class Java {
     private String framework;
     private String ide;
 
+
+
     public Java(String framework, String ide) {
         this.framework = framework;
         this.ide = ide;
@@ -17,5 +19,8 @@ public class Java {
         return ide;
     }
 
+    public String getInfo(){
+        return  " || Framework: "  + framework + " || IDE: " + ide;
+    }
 
 }

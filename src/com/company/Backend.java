@@ -3,7 +3,7 @@ package com.company;
 public class Backend extends Java {
 
     private String developType;
-    Language language = new Language(Languages.JAVA);
+    private Language language;
 
 
     public void makeCodeBetter(String name, String massage, int line){
@@ -14,13 +14,20 @@ public class Backend extends Java {
         System.out.println(massage);
     }
 
+    @Override
     public String getInfo(){
-        return "Develop type: " + developType + "Language: " + language.getLanguage() ;
+        return super.getInfo() + " || Develop type: " + developType + " || Language: " + language;
     }
 
-    public Backend(String framework, String ide, String developType) {
+    public Backend(String framework, String ide, String developType, Language language) {
         super(framework, ide);
+        this.language = language;
         this.developType = developType;
+
+    }
+
+    public Language getLanguage() {
+        return language;
     }
 
     public String getDevelopType() {
@@ -30,6 +37,5 @@ public class Backend extends Java {
     public Backend(String framework, String ide) {
         super(framework, ide);
     }
-
 
 }
